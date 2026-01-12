@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { Main } from '@/components/elements/main'
 import { GitHubIcon } from '@/components/icons/social/github-icon'
@@ -12,11 +10,8 @@ import {
   NewsletterForm,
   SocialLink,
 } from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
-import {
-  NavbarLink,
-  NavbarLogo,
-  NavbarWithLinksActionsAndCenteredLogo,
-} from '@/components/sections/navbar-with-links-actions-and-centered-logo'
+import { NavbarLink, NavbarLogo } from '@/components/sections/navbar-with-links-actions-and-centered-logo'
+import { NavbarWithLogoActionsAndLeftAlignedLinks } from '@/components/sections/navbar-with-logo-actions-and-left-aligned-links'
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -45,35 +40,35 @@ export default function RootLayout({
       </head>
       <body>
         <>
-          <NavbarWithLinksActionsAndCenteredLogo
+          <NavbarWithLogoActionsAndLeftAlignedLinks
             id="navbar"
-            links={
-              <>
-                <NavbarLink href="/pricing">Pricing</NavbarLink>
-                <NavbarLink href="/about">About</NavbarLink>
-                <NavbarLink href="#">Docs</NavbarLink>
-                <NavbarLink href="#" className="sm:hidden">
-                  Log in
-                </NavbarLink>
-              </>
-            }
             logo={
-              <NavbarLogo href="/">
-                <Image
-                  src="/img/logos/oatmeal-familjen-color-mist-950.svg"
+              <NavbarLogo href="#">
+                <img
+                  src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=mist-950"
                   alt="Oatmeal"
                   className="dark:hidden"
                   width={96}
                   height={28}
                 />
-                <Image
-                  src="/img/logos/oatmeal-familjen-color-white.svg"
+                <img
+                  src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=white"
                   alt="Oatmeal"
                   className="not-dark:hidden"
                   width={96}
                   height={28}
                 />
               </NavbarLogo>
+            }
+            links={
+              <>
+                <NavbarLink href="#">Pricing</NavbarLink>
+                <NavbarLink href="#">About</NavbarLink>
+                <NavbarLink href="#">Docs</NavbarLink>
+                <NavbarLink href="#" className="sm:hidden">
+                  Log in
+                </NavbarLink>
+              </>
             }
             actions={
               <>

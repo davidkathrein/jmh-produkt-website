@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check": "eslint & tsc --noEmit",
+    "format": "prettier --write ."
   },
   "prettier": {
     "semi": false,

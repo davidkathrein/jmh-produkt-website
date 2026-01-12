@@ -1,42 +1,49 @@
-import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
-import { Logo, LogoGrid } from '@/components/elements/logo-grid'
-import { Main } from '@/components/elements/main'
-import { ChevronIcon } from '@/components/icons/chevron-icon'
-import { GitHubIcon } from '@/components/icons/social/github-icon'
-import { XIcon } from '@/components/icons/social/x-icon'
-import { YouTubeIcon } from '@/components/icons/social/youtube-icon'
-import { CallToActionSimpleCentered } from '@/components/sections/call-to-action-simple-centered'
-import { FAQsAccordion, Faq } from '@/components/sections/faqs-accordion'
+import {
+  ButtonLink,
+  PlainButtonLink,
+  SoftButtonLink,
+} from "@/components/elements/button";
+import { Logo, LogoGrid } from "@/components/elements/logo-grid";
+import { Main } from "@/components/elements/main";
+import { ChevronIcon } from "@/components/icons/chevron-icon";
+import { GitHubIcon } from "@/components/icons/social/github-icon";
+import { XIcon } from "@/components/icons/social/x-icon";
+import { YouTubeIcon } from "@/components/icons/social/youtube-icon";
+import { CallToActionSimpleCentered } from "@/components/sections/call-to-action-simple-centered";
+import { FAQsAccordion, Faq } from "@/components/sections/faqs-accordion";
 import {
   FooterCategory,
   FooterLink,
   FooterWithNewsletterFormCategoriesAndSocialIcons,
   NewsletterForm,
   SocialLink,
-} from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
+} from "@/components/sections/footer-with-newsletter-form-categories-and-social-icons";
 import {
   NavbarLink,
   NavbarLogo,
   NavbarWithLinksActionsAndCenteredLogo,
-} from '@/components/sections/navbar-with-links-actions-and-centered-logo'
-import { PlanComparisonTable } from '@/components/sections/plan-comparison-table'
-import { Plan, PricingHeroMultiTier } from '@/components/sections/pricing-hero-multi-tier'
-import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
+} from "@/components/sections/navbar-with-links-actions-and-centered-logo";
+import { PlanComparisonTable } from "@/components/sections/plan-comparison-table";
+import {
+  Plan,
+  PricingHeroMultiTier,
+} from "@/components/sections/pricing-hero-multi-tier";
+import { TestimonialTwoColumnWithLargePhoto } from "@/components/sections/testimonial-two-column-with-large-photo";
 
 function plans(option: string) {
   return (
     <>
       <Plan
         name="Starter"
-        price={option === 'Monthly' ? '$12' : '$120'}
-        period={option === 'Monthly' ? '/month' : '/year'}
+        price={option === "Monthly" ? "$12" : "$120"}
+        period={option === "Monthly" ? "/month" : "/year"}
         subheadline={<p>Small teams getting started with shared inboxes</p>}
         features={[
-          'Shared inbox for up to 2 mailboxes',
-          'Tagging & assignment',
-          'Private notes',
-          'Automatic replies',
-          'Email support',
+          "Shared inbox for up to 2 mailboxes",
+          "Tagging & assignment",
+          "Private notes",
+          "Automatic replies",
+          "Email support",
         ]}
         cta={
           <SoftButtonLink href="#" size="lg">
@@ -46,18 +53,18 @@ function plans(option: string) {
       />
       <Plan
         name="Growth"
-        price={option === 'Monthly' ? '$49' : '$490'}
-        period={option === 'Monthly' ? '/month' : '/year'}
+        price={option === "Monthly" ? "$49" : "$490"}
+        period={option === "Monthly" ? "/month" : "/year"}
         subheadline={<p>Growing teams needing collaboration and insights</p>}
         badge="Most popular"
         features={[
-          'Everything in Starter',
-          'Inbox Agent',
-          'Unlimited mailboxes',
-          'Collision detection',
-          'Snippets and templates',
-          'Reporting dashboard',
-          'Slack integration',
+          "Everything in Starter",
+          "Inbox Agent",
+          "Unlimited mailboxes",
+          "Collision detection",
+          "Snippets and templates",
+          "Reporting dashboard",
+          "Slack integration",
         ]}
         cta={
           <ButtonLink href="#" size="lg">
@@ -67,17 +74,17 @@ function plans(option: string) {
       />
       <Plan
         name="Pro"
-        price={option === 'Monthly' ? '$299' : '$2990'}
-        period={option === 'Monthly' ? '/month' : '/year'}
+        price={option === "Monthly" ? "$299" : "$2990"}
+        period={option === "Monthly" ? "/month" : "/year"}
         subheadline={<p>Support-focused organizations and larger teams</p>}
         features={[
-          'Everything in Growth',
-          'Custom roles & permissions',
-          'Automation engine',
-          'API access',
-          'SLA tracking',
-          'SSO support',
-          'SOC 2 compliance',
+          "Everything in Growth",
+          "Custom roles & permissions",
+          "Automation engine",
+          "API access",
+          "SLA tracking",
+          "SSO support",
+          "SOC 2 compliance",
         ]}
         cta={
           <SoftButtonLink href="#" size="lg">
@@ -86,7 +93,7 @@ function plans(option: string) {
         }
       />
     </>
-  )
+  );
 }
 
 export default function Page() {
@@ -106,14 +113,14 @@ export default function Page() {
         }
         logo={
           <NavbarLogo href="#">
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=mist-950"
               alt="Oatmeal"
               className="dark:hidden"
               width={96}
               height={28}
             />
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=white"
               alt="Oatmeal"
               className="not-dark:hidden"
@@ -139,23 +146,24 @@ export default function Page() {
           headline="Pricing"
           subheadline={
             <p>
-              Simplify your shared inbox, collaborate effortlessly, and give every customer a reply that feels personal,
-              even if it was written by a bot.
+              Simplify your shared inbox, collaborate effortlessly, and give
+              every customer a reply that feels personal, even if it was written
+              by a bot.
             </p>
           }
-          options={['Monthly', 'Yearly']}
-          plans={{ Monthly: plans('Monthly'), Yearly: plans('Yearly') }}
+          options={["Monthly", "Yearly"]}
+          plans={{ Monthly: plans("Monthly"), Yearly: plans("Yearly") }}
           footer={
             <LogoGrid>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/9.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={51}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/9.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -164,14 +172,14 @@ export default function Page() {
                 />
               </Logo>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/10.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={70}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/10.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -180,14 +188,14 @@ export default function Page() {
                 />
               </Logo>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/11.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={100}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/11.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -196,14 +204,14 @@ export default function Page() {
                 />
               </Logo>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/12.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={85}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/12.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -212,14 +220,14 @@ export default function Page() {
                 />
               </Logo>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/13.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={75}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/13.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -228,14 +236,14 @@ export default function Page() {
                 />
               </Logo>
               <Logo>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/8.svg?color=black&height=32"
                   className="dark:hidden"
                   alt=""
                   width={85}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/8.svg?color=white&height=32"
                   className="not-dark:hidden"
                   alt=""
@@ -250,88 +258,92 @@ export default function Page() {
         {/* Plan Comparison Table */}
         <PlanComparisonTable
           id="pricing"
-          plans={['Starter', 'Growth', 'Pro']}
+          plans={["Starter", "Growth", "Pro"]}
           features={[
             {
-              title: 'Collaboration',
+              title: "Collaboration",
               features: [
                 {
-                  name: 'Shared inboxes',
-                  value: { Starter: '2', Growth: 'Unlimited', Pro: 'Unlimited' },
+                  name: "Shared inboxes",
+                  value: {
+                    Starter: "2",
+                    Growth: "Unlimited",
+                    Pro: "Unlimited",
+                  },
                 },
-                { name: 'Private notes', value: true },
-                { name: 'Tagging & assignment', value: true },
+                { name: "Private notes", value: true },
+                { name: "Tagging & assignment", value: true },
                 {
-                  name: 'Collision detection',
+                  name: "Collision detection",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Real-time activity indicators',
+                  name: "Real-time activity indicators",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Internal chat',
+                  name: "Internal chat",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
               ],
             },
             {
-              title: 'Automation',
+              title: "Automation",
               features: [
-                { name: 'Automatic replies', value: true },
+                { name: "Automatic replies", value: true },
                 {
-                  name: 'Inbox Agent',
+                  name: "Inbox Agent",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Automation engine',
+                  name: "Automation engine",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Snippets and templates',
+                  name: "Snippets and templates",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'SLA tracking',
+                  name: "SLA tracking",
                   value: { Starter: false, Growth: false, Pro: true },
                 },
               ],
             },
             {
-              title: 'Team Management',
+              title: "Team Management",
               features: [
                 {
-                  name: 'Unlimited users',
-                  value: { Starter: 'Up to 5', Growth: true, Pro: true },
+                  name: "Unlimited users",
+                  value: { Starter: "Up to 5", Growth: true, Pro: true },
                 },
                 {
-                  name: 'Reporting dashboard',
+                  name: "Reporting dashboard",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Slack integration',
+                  name: "Slack integration",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Roles & permissions',
+                  name: "Roles & permissions",
                   value: { Starter: false, Growth: false, Pro: true },
                 },
                 {
-                  name: 'SSO support',
+                  name: "SSO support",
                   value: { Starter: false, Growth: false, Pro: true },
                 },
               ],
             },
             {
-              title: 'Support',
+              title: "Support",
               features: [
-                { name: 'Email support', value: true },
+                { name: "Email support", value: true },
                 {
-                  name: 'Priority response',
+                  name: "Priority response",
                   value: { Starter: false, Growth: true, Pro: true },
                 },
                 {
-                  name: 'Dedicated manager',
+                  name: "Dedicated manager",
                   value: { Starter: false, Growth: false, Pro: true },
                 },
               ],
@@ -344,12 +356,13 @@ export default function Page() {
           id="testimonial"
           quote={
             <p>
-              Ever since we started using Oatmeal, our customer satisfaction scores have skyrocketed. The personal touch
-              that their human-AI hybrid support provides is unparalleled.
+              Ever since we started using Oatmeal, our customer satisfaction
+              scores have skyrocketed. The personal touch that their human-AI
+              hybrid support provides is unparalleled.
             </p>
           }
           img={
-            <img
+            <Image
               src="https://assets.tailwindplus.com/avatars/16.webp?w=1400&h=1000"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
@@ -390,7 +403,10 @@ export default function Page() {
           id="call-to-action"
           headline="Have anymore questions?"
           subheadline={
-            <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
+            <p>
+              Chat to someone on our sales team, who will make promises about
+              our roadmap that we won't keep.
+            </p>
           }
           cta={
             <div className="flex items-center gap-4">
@@ -413,8 +429,8 @@ export default function Page() {
             headline="Stay in the loop"
             subheadline={
               <p>
-                Get customer support tips, product updates and customer stories that you can archive as soon as they
-                arrive.
+                Get customer support tips, product updates and customer stories
+                that you can archive as soon as they arrive.
               </p>
             }
             action="#"
@@ -462,5 +478,5 @@ export default function Page() {
         }
       />
     </>
-  )
+  );
 }

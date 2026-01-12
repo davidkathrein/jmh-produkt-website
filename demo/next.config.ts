@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'tailwindcss.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ajo9kxm7rzpucqha.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 }

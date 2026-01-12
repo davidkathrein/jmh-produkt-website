@@ -3,9 +3,11 @@ import Link from 'next/link'
 import { clsx } from 'clsx/lite'
 import type { ComponentProps } from 'react'
 
+import MagneticWrapper from './magnetic-wrapper'
+
 const sizes = {
-  md: 'px-3 py-1',
-  lg: 'px-4 py-2',
+  md: 'px-4 py-1',
+  lg: 'px-6 py-2',
 }
 
 export function Button({
@@ -19,18 +21,20 @@ export function Button({
   color?: 'dark/light' | 'light'
 } & ComponentProps<'button'>) {
   return (
-    <button
-      type={type}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
-        color === 'dark/light' &&
-          'bg-mist-950 text-white hover:bg-mist-800 dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
-        color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <button
+        type={type}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium transition-colors',
+          color === 'dark/light' &&
+            'bg-mist-950 text-white hover:bg-mist-800 dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
+          color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }
 
@@ -46,18 +50,20 @@ export function ButtonLink({
   color?: 'dark/light' | 'light'
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
-    <Link
-      href={href}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
-        color === 'dark/light' &&
-          'bg-mist-950 text-white hover:bg-mist-800 dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
-        color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <Link
+        href={href}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-1 rounded-full text-sm/7 font-medium',
+          color === 'dark/light' &&
+            'bg-mist-950 text-white hover:bg-mist-800 dark:bg-mist-300 dark:text-mist-950 dark:hover:bg-mist-200',
+          color === 'light' && 'hover bg-white text-mist-950 hover:bg-mist-100 dark:bg-mist-100 dark:hover:bg-white',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }
 
@@ -70,15 +76,17 @@ export function SoftButton({
   size?: keyof typeof sizes
 } & ComponentProps<'button'>) {
   return (
-    <button
-      type={type}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <button
+        type={type}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }
 
@@ -92,15 +100,17 @@ export function SoftButtonLink({
   size?: keyof typeof sizes
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
-    <Link
-      href={href}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <Link
+        href={href}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-mist-950/10 text-sm/7 font-medium text-mist-950 hover:bg-mist-950/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }
 
@@ -115,17 +125,19 @@ export function PlainButton({
   color?: 'dark/light' | 'light'
 } & ComponentProps<'button'>) {
   return (
-    <button
-      type={type}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-sm/7 font-medium',
-        color === 'dark/light' && 'text-mist-950 hover:bg-mist-950/10 dark:text-white dark:hover:bg-white/10',
-        color === 'light' && 'text-white hover:bg-white/15 dark:hover:bg-white/10',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <button
+        type={type}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-sm/7 font-medium',
+          color === 'dark/light' && 'text-mist-950 hover:bg-mist-950/10 dark:text-white dark:hover:bg-white/10',
+          color === 'light' && 'text-white hover:bg-white/15 dark:hover:bg-white/10',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }
 
@@ -141,16 +153,18 @@ export function PlainButtonLink({
   color?: 'dark/light' | 'light'
 } & Omit<ComponentProps<'a'>, 'href'>) {
   return (
-    <Link
-      href={href}
-      className={clsx(
-        'inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-sm/7 font-medium',
-        color === 'dark/light' && 'text-mist-950 hover:bg-mist-950/10 dark:text-white dark:hover:bg-white/10',
-        color === 'light' && 'text-white hover:bg-white/15 dark:hover:bg-white/10',
-        sizes[size],
-        className,
-      )}
-      {...props}
-    />
+    <MagneticWrapper>
+      <Link
+        href={href}
+        className={clsx(
+          'inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-sm/7 font-medium',
+          color === 'dark/light' && 'text-mist-950 hover:bg-mist-950/10 dark:text-white dark:hover:bg-white/10',
+          color === 'light' && 'text-white hover:bg-white/15 dark:hover:bg-white/10',
+          sizes[size],
+          className,
+        )}
+        {...props}
+      />
+    </MagneticWrapper>
   )
 }

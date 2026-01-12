@@ -1,24 +1,37 @@
-import { AnnouncementBadge } from '@/components/elements/announcement-badge'
-import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
-import { Main } from '@/components/elements/main'
-import { ChevronIcon } from '@/components/icons/chevron-icon'
-import { GitDiffIcon } from '@/components/icons/git-diff-icon'
-import { HeartIcon } from '@/components/icons/heart-icon'
-import { RocketIcon } from '@/components/icons/rocket-icon'
-import { StarIcon } from '@/components/icons/star-icon'
-import { TargetIcon } from '@/components/icons/target-icon'
-import { User2Icon } from '@/components/icons/user-2-icon'
-import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-cards-multi-column'
-import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
-import { Feature, FeaturesThreeColumn } from '@/components/sections/features-three-column'
-import { FooterCategory, FooterLink, FooterWithLinkCategories } from '@/components/sections/footer-with-link-categories'
-import { HeroTwoColumnWithPhoto } from '@/components/sections/hero-two-column-with-photo'
+import { AnnouncementBadge } from "@/components/elements/announcement-badge";
+import { ButtonLink, PlainButtonLink } from "@/components/elements/button";
+import { Main } from "@/components/elements/main";
+import { ChevronIcon } from "@/components/icons/chevron-icon";
+import { GitDiffIcon } from "@/components/icons/git-diff-icon";
+import { HeartIcon } from "@/components/icons/heart-icon";
+import { RocketIcon } from "@/components/icons/rocket-icon";
+import { StarIcon } from "@/components/icons/star-icon";
+import { TargetIcon } from "@/components/icons/target-icon";
+import { User2Icon } from "@/components/icons/user-2-icon";
+import {
+  BrandCard,
+  BrandsCardsMultiColumn,
+} from "@/components/sections/brands-cards-multi-column";
+import { CallToActionSimple } from "@/components/sections/call-to-action-simple";
+import {
+  Feature,
+  FeaturesThreeColumn,
+} from "@/components/sections/features-three-column";
+import {
+  FooterCategory,
+  FooterLink,
+  FooterWithLinkCategories,
+} from "@/components/sections/footer-with-link-categories";
+import { HeroTwoColumnWithPhoto } from "@/components/sections/hero-two-column-with-photo";
 import {
   NavbarLink,
   NavbarLogo,
   NavbarWithLogoActionsAndCenteredLinks,
-} from '@/components/sections/navbar-with-logo-actions-and-centered-links'
-import { TeamMember, TeamThreeColumnGrid } from '@/components/sections/team-three-column-grid'
+} from "@/components/sections/navbar-with-logo-actions-and-centered-links";
+import {
+  TeamMember,
+  TeamThreeColumnGrid,
+} from "@/components/sections/team-three-column-grid";
 
 export default function Page() {
   return (
@@ -37,14 +50,14 @@ export default function Page() {
         }
         logo={
           <NavbarLogo href="#">
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=mist-950"
               alt="Oatmeal"
               className="dark:hidden"
               width={96}
               height={28}
             />
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=white"
               alt="Oatmeal"
               className="not-dark:hidden"
@@ -67,24 +80,31 @@ export default function Page() {
         {/* Hero */}
         <HeroTwoColumnWithPhoto
           id="hero"
-          eyebrow={<AnnouncementBadge href="#" text="2025 Business of the Year" cta="Learn more" />}
+          eyebrow={
+            <AnnouncementBadge
+              href="#"
+              text="2025 Business of the Year"
+              cta="Learn more"
+            />
+          }
           headline="Your customer success is our mission."
           subheadline={
             <p>
-              We're on a mission to take the human element completely out of customer support — so your team can focus
-              on what matters most, profitability.
+              We're on a mission to take the human element completely out of
+              customer support — so your team can focus on what matters most,
+              profitability.
             </p>
           }
           photo={
             <>
-              <img
+              <Image
                 className="not-dark:bg-white/75 max-xl:hidden dark:bg-black/75"
                 src="https://assets.tailwindplus.com/photos/1.webp"
                 width={1800}
                 height={1600}
                 alt=""
               />
-              <img
+              <Image
                 className="not-dark:bg-white/75 xl:hidden dark:bg-black/75"
                 src="https://assets.tailwindplus.com/photos/1.webp"
                 width={1800}
@@ -102,22 +122,22 @@ export default function Page() {
           headline="Funded by leading investors."
           subheadline={
             <p>
-              Oatmeal is backed by investors with decades of experience building the world's most boring and predictable
-              B2B SaaS.
+              Oatmeal is backed by investors with decades of experience building
+              the world's most boring and predictable B2B SaaS.
             </p>
           }
         >
           <BrandCard
             logo={
               <>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/15.svg?color=black&width=110"
                   className="dark:hidden"
                   alt=""
                   width={124}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/15.svg?color=white&width=110"
                   className="not-dark:hidden"
                   alt=""
@@ -132,14 +152,14 @@ export default function Page() {
           <BrandCard
             logo={
               <>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/16.svg?color=black&width=120"
                   className="dark:hidden"
                   alt=""
                   width={146}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/16.svg?color=white&width=120"
                   className="not-dark:hidden"
                   alt=""
@@ -154,14 +174,14 @@ export default function Page() {
           <BrandCard
             logo={
               <>
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/14.svg?color=black&width=80"
                   className="dark:hidden"
                   alt=""
                   width={106}
                   height={32}
                 />
-                <img
+                <Image
                   src="https://assets.tailwindplus.com/logos/14.svg?color=white&width=80"
                   className="not-dark:hidden"
                   alt=""
@@ -181,14 +201,15 @@ export default function Page() {
           headline="Our leadership team"
           subheadline={
             <p>
-              Oatmeals's leadership team combines decades of experience in private equity, where they honed their skills
-              in cost-cutting and maximizing shareholder value.
+              Oatmeals's leadership team combines decades of experience in
+              private equity, where they honed their skills in cost-cutting and
+              maximizing shareholder value.
             </p>
           }
         >
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/1.webp?w=800&h=800"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -201,7 +222,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/2.webp?w=800&h=800"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -214,7 +235,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/7.webp?w=800&h=800"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -233,8 +254,9 @@ export default function Page() {
           headline="Our values."
           subheadline={
             <p>
-              Work smarter, reply faster, and keep every customer conversation right where it belongs — in one simple
-              inbox, where you can ignore it.
+              Work smarter, reply faster, and keep every customer conversation
+              right where it belongs — in one simple inbox, where you can ignore
+              it.
             </p>
           }
           features={
@@ -244,8 +266,9 @@ export default function Page() {
                 headline="Innovation"
                 subheadline={
                   <p>
-                    We are constantly pushing the boundaries of what's possible, and legal, in customer support to
-                    deliver cutting-edge solutions for our clients.
+                    We are constantly pushing the boundaries of what's possible,
+                    and legal, in customer support to deliver cutting-edge
+                    solutions for our clients.
                   </p>
                 }
               />
@@ -254,8 +277,8 @@ export default function Page() {
                 headline="Integrity"
                 subheadline={
                   <p>
-                    We are driven by a commitment to ethical business practices, transparency, and most of all,
-                    maximizing shareholder value.
+                    We are driven by a commitment to ethical business practices,
+                    transparency, and most of all, maximizing shareholder value.
                   </p>
                 }
               />
@@ -264,8 +287,8 @@ export default function Page() {
                 headline="Collaboration"
                 subheadline={
                   <p>
-                    We believe teamwork makes the dream work, especially when that dream is offshoring local jobs to the
-                    lowest bidder.
+                    We believe teamwork makes the dream work, especially when
+                    that dream is offshoring local jobs to the lowest bidder.
                   </p>
                 }
               />
@@ -274,8 +297,8 @@ export default function Page() {
                 headline="Diversity"
                 subheadline={
                   <p>
-                    Diversity can mean many things, but to us it mainly means hiring people from countries with the
-                    lowest labour costs.
+                    Diversity can mean many things, but to us it mainly means
+                    hiring people from countries with the lowest labour costs.
                   </p>
                 }
               />
@@ -284,8 +307,9 @@ export default function Page() {
                 headline="Accountability"
                 subheadline={
                   <p>
-                    Our customers' success is our success and their failure is our failure, except in the legal sense
-                    where our liability is limited.
+                    Our customers' success is our success and their failure is
+                    our failure, except in the legal sense where our liability
+                    is limited.
                   </p>
                 }
               />
@@ -294,8 +318,9 @@ export default function Page() {
                 headline="Quality"
                 subheadline={
                   <p>
-                    We believe that you can move fast without breaking things, unless those things are labour laws in
-                    third world countries.
+                    We believe that you can move fast without breaking things,
+                    unless those things are labour laws in third world
+                    countries.
                   </p>
                 }
               />
@@ -308,7 +333,10 @@ export default function Page() {
           id="call-to-action"
           headline="Have anymore questions?"
           subheadline={
-            <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
+            <p>
+              Chat to someone on our sales team, who will make promises about
+              our roadmap that we won't keep.
+            </p>
           }
           cta={
             <div className="flex items-center gap-4">
@@ -360,5 +388,5 @@ export default function Page() {
         fineprint="© 2025 Oatmeal, Inc."
       />
     </>
-  )
+  );
 }

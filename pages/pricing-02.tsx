@@ -1,17 +1,21 @@
-import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
-import { Main } from '@/components/elements/main'
-import { ChevronIcon } from '@/components/icons/chevron-icon'
-import { CallToActionSimpleCentered } from '@/components/sections/call-to-action-simple-centered'
-import { FAQsAccordion, Faq } from '@/components/sections/faqs-accordion'
-import { FooterCategory, FooterLink, FooterWithLinkCategories } from '@/components/sections/footer-with-link-categories'
+import { ButtonLink, PlainButtonLink } from "@/components/elements/button";
+import { Main } from "@/components/elements/main";
+import { ChevronIcon } from "@/components/icons/chevron-icon";
+import { CallToActionSimpleCentered } from "@/components/sections/call-to-action-simple-centered";
+import { FAQsAccordion, Faq } from "@/components/sections/faqs-accordion";
+import {
+  FooterCategory,
+  FooterLink,
+  FooterWithLinkCategories,
+} from "@/components/sections/footer-with-link-categories";
 import {
   NavbarLink,
   NavbarLogo,
   NavbarWithLogoActionsAndCenteredLinks,
-} from '@/components/sections/navbar-with-logo-actions-and-centered-links'
-import { PricingSingleTierTwoColumn } from '@/components/sections/pricing-single-tier-two-column'
-import { TestimonialLargeQuote } from '@/components/sections/testimonial-with-large-quote'
-import { Example as Hero } from '@/examples/hero-simple-centered-pricing'
+} from "@/components/sections/navbar-with-logo-actions-and-centered-links";
+import { PricingSingleTierTwoColumn } from "@/components/sections/pricing-single-tier-two-column";
+import { TestimonialLargeQuote } from "@/components/sections/testimonial-with-large-quote";
+import { Example as Hero } from "@/examples/hero-simple-centered-pricing";
 
 export default function Page() {
   return (
@@ -30,14 +34,14 @@ export default function Page() {
         }
         logo={
           <NavbarLogo href="#">
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=mist-950"
               alt="Oatmeal"
               className="dark:hidden"
               width={96}
               height={28}
             />
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=white"
               alt="Oatmeal"
               className="not-dark:hidden"
@@ -65,18 +69,21 @@ export default function Page() {
           id="pricing"
           headline="No setup fees. No contracts. Cancel anytime."
           subheadline={
-            <p>Commitment free, because we are banking on the fact that you'll forget that you're even paying us.</p>
+            <p>
+              Commitment free, because we are banking on the fact that you'll
+              forget that you're even paying us.
+            </p>
           }
           price="$49"
           period="/mo"
           features={[
-            'Unlimited mailboxes',
-            'Unlimited team members',
-            'Inbox Agent',
-            'Collision detection',
-            'Snippets and templates',
-            'Reporting dashboard',
-            'Slack integration',
+            "Unlimited mailboxes",
+            "Unlimited team members",
+            "Inbox Agent",
+            "Collision detection",
+            "Snippets and templates",
+            "Reporting dashboard",
+            "Slack integration",
           ]}
           cta={
             <ButtonLink href="#" size="lg">
@@ -90,12 +97,14 @@ export default function Page() {
           id="testimonial"
           quote={
             <p>
-              Oatmeal has completely transformed our customer support operations. The blend of AI efficiency and human
-              empathy has allowed us to provide exceptional service while significantly reducing costs.
+              Oatmeal has completely transformed our customer support
+              operations. The blend of AI efficiency and human empathy has
+              allowed us to provide exceptional service while significantly
+              reducing costs.
             </p>
           }
           img={
-            <img
+            <Image
               src="https://assets.tailwindplus.com/avatars/10.webp?size=160"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
@@ -136,7 +145,10 @@ export default function Page() {
           id="call-to-action"
           headline="Have anymore questions?"
           subheadline={
-            <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
+            <p>
+              Chat to someone on our sales team, who will make promises about
+              our roadmap that we won't keep.
+            </p>
           }
           cta={
             <div className="flex items-center gap-4">
@@ -188,5 +200,5 @@ export default function Page() {
         fineprint="© 2025 Oatmeal, Inc."
       />
     </>
-  )
+  );
 }

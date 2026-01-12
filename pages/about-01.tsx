@@ -1,26 +1,29 @@
-import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
-import { Main } from '@/components/elements/main'
-import { ChevronIcon } from '@/components/icons/chevron-icon'
-import { GitHubIcon } from '@/components/icons/social/github-icon'
-import { XIcon } from '@/components/icons/social/x-icon'
-import { YouTubeIcon } from '@/components/icons/social/youtube-icon'
-import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
+import { ButtonLink, PlainButtonLink } from "@/components/elements/button";
+import { Main } from "@/components/elements/main";
+import { ChevronIcon } from "@/components/icons/chevron-icon";
+import { GitHubIcon } from "@/components/icons/social/github-icon";
+import { XIcon } from "@/components/icons/social/x-icon";
+import { YouTubeIcon } from "@/components/icons/social/youtube-icon";
+import { CallToActionSimple } from "@/components/sections/call-to-action-simple";
 import {
   FooterCategory,
   FooterLink,
   FooterWithNewsletterFormCategoriesAndSocialIcons,
   NewsletterForm,
   SocialLink,
-} from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
-import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligned-with-photo'
+} from "@/components/sections/footer-with-newsletter-form-categories-and-social-icons";
+import { HeroLeftAlignedWithPhoto } from "@/components/sections/hero-left-aligned-with-photo";
 import {
   NavbarLink,
   NavbarLogo,
   NavbarWithLinksActionsAndCenteredLogo,
-} from '@/components/sections/navbar-with-links-actions-and-centered-logo'
-import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
-import { TeamFourColumnGrid, TeamMember } from '@/components/sections/team-four-column-grid'
-import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
+} from "@/components/sections/navbar-with-links-actions-and-centered-logo";
+import { Stat, StatsWithGraph } from "@/components/sections/stats-with-graph";
+import {
+  TeamFourColumnGrid,
+  TeamMember,
+} from "@/components/sections/team-four-column-grid";
+import { TestimonialTwoColumnWithLargePhoto } from "@/components/sections/testimonial-two-column-with-large-photo";
 
 export default function Page() {
   return (
@@ -39,14 +42,14 @@ export default function Page() {
         }
         logo={
           <NavbarLogo href="#">
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=mist-950"
               alt="Oatmeal"
               className="dark:hidden"
               width={96}
               height={28}
             />
-            <img
+            <Image
               src="https://assets.tailwindplus.com/logos/oatmeal-familjen.svg?color=white"
               alt="Oatmeal"
               className="not-dark:hidden"
@@ -72,12 +75,13 @@ export default function Page() {
           headline="Your customer success is our mission."
           subheadline={
             <p>
-              We're on a mission to take the human element completely out of customer support — so your team can focus
-              on what matters most, profitability.
+              We're on a mission to take the human element completely out of
+              customer support — so your team can focus on what matters most,
+              profitability.
             </p>
           }
           photo={
-            <img
+            <Image
               src="https://assets.tailwindplus.com/photos/1.webp"
               alt=""
               width={1800}
@@ -94,14 +98,21 @@ export default function Page() {
           headline="The inbox powering customer conversations everywhere."
           subheadline={
             <p>
-              Oatmeal helps teams deliver personal, organized, and fast customer support across the world. From small
-              startups to enterprise teams, we process millions of messages each month — using a massive network of low
-              wage workers stationed around the globe.
+              Oatmeal helps teams deliver personal, organized, and fast customer
+              support across the world. From small startups to enterprise teams,
+              we process millions of messages each month — using a massive
+              network of low wage workers stationed around the globe.
             </p>
           }
         >
-          <Stat stat="2M+" text="Emails manually processed every week across thousands of teams." />
-          <Stat stat="99.98%" text="Uptime — because your customers never stop complaining." />
+          <Stat
+            stat="2M+"
+            text="Emails manually processed every week across thousands of teams."
+          />
+          <Stat
+            stat="99.98%"
+            text="Uptime — because your customers never stop complaining."
+          />
         </StatsWithGraph>
 
         {/* Testimonial */}
@@ -109,12 +120,13 @@ export default function Page() {
           id="testimonial"
           quote={
             <p>
-              Ever since we started using Oatmeal, our customer satisfaction scores have skyrocketed. The personal touch
-              that their human-AI hybrid support provides is unparalleled.
+              Ever since we started using Oatmeal, our customer satisfaction
+              scores have skyrocketed. The personal touch that their human-AI
+              hybrid support provides is unparalleled.
             </p>
           }
           img={
-            <img
+            <Image
               src="https://assets.tailwindplus.com/avatars/16.webp?w=1400&h=1000"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
@@ -132,14 +144,15 @@ export default function Page() {
           headline="Our leadership team"
           subheadline={
             <p>
-              Oatmeals's leadership team combines decades of experience in private equity, where they honed their skills
-              in cost-cutting and maximizing shareholder value.
+              Oatmeals's leadership team combines decades of experience in
+              private equity, where they honed their skills in cost-cutting and
+              maximizing shareholder value.
             </p>
           }
         >
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/1.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -152,7 +165,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/2.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -165,7 +178,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/7.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -178,7 +191,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/4.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -191,7 +204,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/5.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -204,7 +217,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/6.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -217,7 +230,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/8.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -230,7 +243,7 @@ export default function Page() {
           />
           <TeamMember
             img={
-              <img
+              <Image
                 src="https://assets.tailwindplus.com/avatars/3.webp?w=800&h=1000"
                 alt=""
                 className="not-dark:bg-white/75 dark:bg-black/75"
@@ -248,7 +261,10 @@ export default function Page() {
           id="call-to-action"
           headline="Have anymore questions?"
           subheadline={
-            <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
+            <p>
+              Chat to someone on our sales team, who will make promises about
+              our roadmap that we won't keep.
+            </p>
           }
           cta={
             <div className="flex items-center gap-4">
@@ -271,8 +287,8 @@ export default function Page() {
             headline="Stay in the loop"
             subheadline={
               <p>
-                Get customer support tips, product updates and customer stories that you can archive as soon as they
-                arrive.
+                Get customer support tips, product updates and customer stories
+                that you can archive as soon as they arrive.
               </p>
             }
             action="#"
@@ -320,5 +336,5 @@ export default function Page() {
         }
       />
     </>
-  )
+  );
 }

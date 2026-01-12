@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-display: 'Familjen Grotesk', sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
@@ -15,6 +17,18 @@
   --color-mist-800: oklch(27.5% 0.011 216.9);
   --color-mist-900: oklch(21.8% 0.008 223.9);
   --color-mist-950: oklch(14.8% 0.004 228.8);
+
+  /* --color-mist-50: var(--color-slate-50);
+  --color-mist-100: var(--color-slate-100);
+  --color-mist-200: var(--color-slate-200);
+  --color-mist-300: var(--color-slate-300);
+  --color-mist-400: var(--color-slate-400);
+  --color-mist-500: var(--color-slate-500);
+  --color-mist-600: var(--color-slate-600);
+  --color-mist-700: var(--color-slate-700);
+  --color-mist-800: var(--color-slate-800);
+  --color-mist-900: var(--color-slate-900);
+  --color-mist-950: #020618; */
 }
 
 @layer base {

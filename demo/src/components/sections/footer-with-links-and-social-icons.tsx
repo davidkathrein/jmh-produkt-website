@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Link from 'next/link'
 
 import { clsx } from 'clsx/lite'
@@ -33,8 +34,8 @@ export function SocialLink({
 }
 
 export function FooterWithLinksAndSocialIcons({
-  links,
-  socialLinks,
+  links: _links,
+  socialLinks: _socialLinks,
   fineprint,
   className,
   ...props
@@ -47,12 +48,12 @@ export function FooterWithLinksAndSocialIcons({
     <footer className={clsx('pt-16', className)} {...props}>
       <div className="bg-mist-950/2.5 py-16 text-mist-950 dark:bg-white/5 dark:text-white">
         <Container className="flex flex-col gap-10 text-center text-sm/7">
-          <div className="flex flex-col gap-6">
+          {/* <div className="flex flex-col gap-6">
             <nav>
               <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">{links}</ul>
             </nav>
             {socialLinks && <div className="flex items-center justify-center gap-10">{socialLinks}</div>}
-          </div>
+          </div> */}
           <div className="text-mist-600 dark:text-mist-500">{fineprint}</div>
         </Container>
       </div>

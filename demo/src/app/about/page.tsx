@@ -17,8 +17,8 @@ export default function Page() {
         headline="Your customer success is our mission."
         subheadline={
           <p>
-            We're on a mission to take the human element completely out of customer support — so your team can focus on
-            what matters most, profitability.
+            We&apos;re on a mission to take the human element completely out of customer support — so your team can
+            focus on what matters most, profitability.
           </p>
         }
         photo={
@@ -74,8 +74,8 @@ export default function Page() {
         headline="Our leadership team"
         subheadline={
           <p>
-            Oatmeals's leadership team combines decades of experience in private equity, where they honed their skills
-            in cost-cutting and maximizing shareholder value.
+            Oatmeals&apos;s leadership team combines decades of experience in private equity, where they honed their
+            skills in cost-cutting and maximizing shareholder value.
           </p>
         }
       >
@@ -189,7 +189,7 @@ export default function Page() {
         id="call-to-action"
         headline="Have anymore questions?"
         subheadline={
-          <p>Chat to someone on our sales team, who will make promises about our roadmap that we won't keep.</p>
+          <p>Chat to someone on our sales team, who will make promises about our roadmap that we won&apos;t keep.</p>
         }
         cta={
           <div className="flex items-center gap-4">

@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: 'JMH Maturaprojekt Demo',
   description:
     'Die digitale Mitarbeiterverwaltung ist ab Februar 2026 in Betrieb und ersetzt damit die bisherige Lösung. ',
+  openGraph: {
+    images: ['https://ajo9kxm7rzpucqha.public.blob.vercel-storage.com/vorschau-opengraph.png'],
+  },
 }
 
 const inter = Inter({

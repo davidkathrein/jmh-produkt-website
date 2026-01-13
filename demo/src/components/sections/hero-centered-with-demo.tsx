@@ -26,7 +26,7 @@ export function HeroCenteredWithDemo({
     <section className={clsx('max-w-screen py-8 sm:py-12 md:py-16', className)} {...props}>
       <Container className="flex flex-col gap-8 sm:gap-12 md:gap-16">
         <div className="flex flex-col items-center gap-12 sm:gap-20 md:gap-32">
-          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6">
+          <div className="flex max-w-screen flex-col items-center gap-4 sm:gap-5 md:gap-6">
             {eyebrow}
             <Spotlight />
             <Heading className="relative z-10 max-w-5xl text-center">{headline}</Heading>

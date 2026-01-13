@@ -43,7 +43,7 @@ export default function Page() {
         <HeroCenteredWithDemo
           id="hero"
           eyebrow={<AnnouncementBadge href="#" text="Live-Betrieb ab Februar 2026" cta="Mehr erfahren" />}
-          headline="Mitarbeiterverwaltung, so einfach wie nie zuvor."
+          headline="Mitarbeiter&shy;verwaltung, so einfach wie nie zuvor."
           subheadline={
             <p>
               Plane Führungen effizient, erstelle Dienstpläne in wenigen Klicks und behalte alle Informationen zu deinen
@@ -51,7 +51,7 @@ export default function Page() {
             </p>
           }
           cta={
-            <div className="flex flex-row flex-wrap justify-center gap-2 sm:flex-col">
+            <div className="flex flex-wrap justify-center gap-2">
               <ButtonLink size={'lg'} href="mailto:hello@davidkathrein.at">
                 Warteliste beitreten <MoveRight size={16} />
               </ButtonLink>

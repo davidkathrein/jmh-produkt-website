@@ -5,13 +5,16 @@ import { Main } from '@/components/elements/main'
 import { Screenshot } from '@/components/elements/screenshot'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
 import BentoTwoRowThreeColSecondRow from '@/components/sections/bento-two-row-three-col-second-row'
-import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
+import { CallToActionSimpleCentered } from '@/components/sections/call-to-action-simple-centered'
+import { Faq, FAQsTwoColumnAccordion } from '@/components/sections/faqs-two-column-accordion'
 import {
   Feature,
   FeaturesStackedAlternatingWithDemos,
 } from '@/components/sections/features-stacked-alternating-with-demos'
 import { HeroCenteredWithDemo } from '@/components/sections/hero-centered-with-demo'
+import { StatsThreeColumnWithDescription } from '@/components/sections/stats-three-column-with-description'
 import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
+import { TeamMember, TeamThreeColumnGrid } from '@/components/sections/team-three-column-grid'
 import { MoveRight, PlayCircleIcon } from 'lucide-react'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -205,6 +208,84 @@ export default function Page() {
           byline="Direktorin, Jüdisches Museum Wien"
         /> */}
 
+        <TeamThreeColumnGrid
+          id="team"
+          headline="Unser passioniertes Team"
+          subheadline={
+            <p>
+              Drei Schüler mit einer gemeinsamen Vision: Kulturvermittlung einfacher machen. Im Rahmen unseres
+              Maturaprojekts entwickeln wir diese Plattform praxisnah und mit dem Ziel, das Jüdische Museum Hohenems im
+              Alltag nachhaltig zu unterstützen.
+            </p>
+          }
+        >
+          <TeamMember
+            img={
+              <Image
+                src="https://ajo9kxm7rzpucqha.public.blob.vercel-storage.com/luca.jpg"
+                alt="Projektleiter Luca Raffeiner"
+                className="not-dark:bg-white/75 dark:bg-black/75"
+                width={800}
+                height={1000}
+              />
+            }
+            name="Luca Raffeiner"
+            byline="Projektleiter"
+          />
+          <TeamMember
+            img={
+              <Image
+                src="https://ajo9kxm7rzpucqha.public.blob.vercel-storage.com/david-neu.jpg"
+                alt="Designer / Entwickler David Kathrein"
+                className="not-dark:bg-white/75 dark:bg-black/75"
+                width={800}
+                height={1000}
+              />
+            }
+            name="David Kathrein"
+            byline="Designer / Fullstack-Entwickler (UX-Lead)"
+          />
+          <TeamMember
+            img={
+              <Image
+                src="https://ajo9kxm7rzpucqha.public.blob.vercel-storage.com/oemer.jpg"
+                alt="Entwickler Ömer Yenidede"
+                className="not-dark:bg-white/75 dark:bg-black/75"
+                width={800}
+                height={1000}
+              />
+            }
+            name="Ömer Yenidede"
+            byline="Fullstack-Entwickler (Backend-Lead)"
+          />
+        </TeamThreeColumnGrid>
+
+        {/* Danksagung */}
+        <StatsThreeColumnWithDescription
+          id="danke"
+          heading="Danksagung"
+          description={
+            <>
+              <p>
+                Dieses Projekt wäre ohne die Unterstützung vieler Menschen nicht möglich gewesen. Unser besonderer Dank
+                gilt dem Team des Jüdischen Museums Hohenems, das uns von Anfang an Vertrauen entgegengebracht und uns
+                mit wertvollem Feedback aus der Praxis begleitet hat.
+              </p>
+              <p>
+                Besonders bedanken möchten wir uns beim Café-Team, das uns während unseres Praktikums stets herzlich
+                versorgt und zum Abschluss sogar mit einem netten Geschenk überrascht hat. Ein großer Dank gilt außerdem
+                dir, Raphael – ohne dich gäbe es dieses Projekt nicht. Deine offene Kommunikation auf Augenhöhe und dein
+                großes Vertrauen in uns haben entscheidend zum Gelingen beigetragen.
+              </p>
+              <p>
+                Ebenso danken wir unseren betreuenden Lehrpersonen für die fachliche Begleitung und den Freiraum,
+                unseren eigenen Weg gehen zu dürfen. Bei Fragen standen sie uns jederzeit unterstützend zur Seite –
+                sogar aus Island (@Fastenbauer). Das ist keineswegs selbstverständlich und schätzen wir sehr.
+              </p>
+            </>
+          }
+        ></StatsThreeColumnWithDescription>
+
         {/* Stats */}
         <StatsWithGraph
           id="stats"
@@ -221,8 +302,37 @@ export default function Page() {
           <Stat stat="bis zu 10x" text="Schneller als klassische Excel-Tabellen – und deutlich zuverlässiger" />
         </StatsWithGraph>
 
+        {/* Häufige Fragen */}
+        <FAQsTwoColumnAccordion headline="Häufige Fragen">
+          <Faq
+            id="faq-1"
+            question="Gibt es eure Plattform wirklich?"
+            answer="Ja! Auch wenn sich diese Website wie eine Marketingseite liest, handelt es sich hierbei um ein echtes Produkt, das aktuell zusammen mit dem Jüdischen Museum Hohenems im Rahmen unseres Maturaprojekts entwickelt wird. Ab Februar 2026 wird die Plattform offiziell in Betrieb genommen. Bei ernstem Interesse kannst du dich gerne auf die Warteliste setzen lassen - wir würden uns freuen!"
+          />
+          <Faq
+            id="faq-2"
+            question="An wen richtet sich eure Plattform?"
+            answer="Wir richten uns primär an Museen, Ausstellungshäuser und sonstige kulturelle Institutionen, die regelmäßig mit Vermittler:innen, Guides oder freien Mitarbeiter:innen arbeiten."
+          />
+          {/* <Faq
+            id="faq-2"
+            question="Ist die Plattform Organisationsunabhängig?"
+            answer="Ja. Mit einem Account können mehrere Organisationen verwaltet und separat organisiert werden. Vermittler:innen können mit einem persönlichen Account ebenfalls mehreren Organisationen beitreten. Ein Login, ein Passwort, alles übersichtlich an einem Ort."
+          /> */}
+          <Faq
+            id="faq-3"
+            question="Wie komme ich auf die Warteliste?"
+            answer="Schreib uns einfach eine unverbindliche E-Mail an hello@davidkathrein.at und wir setzen dich auf die Warteliste. Sobald die interne Testphase mit dem Jüdischen Museum Hohenems abgeschlossen ist, informieren wir dich über die nächsten Schritte."
+          />
+          <Faq
+            id="faq-4"
+            question="Was kostet die Nutzung eurer Plattform?"
+            answer="Unsere Plattform wird für kulturelle Einrichtungen kostenlos angeboten. Für weitere Informationen kannst du uns aber gerne persönlich schreiben."
+          />
+        </FAQsTwoColumnAccordion>
+
         {/* Call To Action */}
-        <CallToActionSimple
+        <CallToActionSimpleCentered
           id="call-to-action"
           headline="Bereit für effiziente Mitarbeiterverwaltung?"
           subheadline={

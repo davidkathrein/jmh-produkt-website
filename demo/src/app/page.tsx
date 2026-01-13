@@ -342,7 +342,7 @@ export default function Page() {
             </p>
           }
           cta={
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <ButtonLink href="mailto:hello@davidkathrein.at" size="lg">
                 Warteliste beitreten <MoveRight size={16} />
               </ButtonLink>

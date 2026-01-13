@@ -29,7 +29,7 @@ export function TeamMember({
 export function TeamThreeColumnGrid({ children, ...props }: ComponentProps<typeof Section>) {
   return (
     <Section {...props}>
-      <ul role="list" className="grid grid-cols-2 gap-x-2 gap-y-10 md:grid-cols-3">
+      <ul role="list" className="grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
         {children}
       </ul>
     </Section>

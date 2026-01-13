@@ -46,9 +46,9 @@ export default function RootLayout({
                 <NavbarLink href="/#weitere-features">Features</NavbarLink>
                 <NavbarLink href="/#team">Team</NavbarLink>
                 <NavbarLink href="/#danke">Danksagung</NavbarLink>
-                <NavbarLink href="mailto:hello@davidkathrein.at" className="sm:hidden">
-                  Warteliste beitreten
-                </NavbarLink>
+                <ButtonLink size="lg" href="mailto:hello@davidkathrein.at" className="mt-2 sm:hidden">
+                  Warteliste beitreten <MoveRight size={20} />
+                </ButtonLink>
               </>
             }
             actions={

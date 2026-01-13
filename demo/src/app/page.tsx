@@ -51,7 +51,7 @@ export default function Page() {
             </p>
           }
           cta={
-            <div className="flex gap-2">
+            <div className="flex flex-row flex-wrap justify-center gap-2 sm:flex-col">
               <ButtonLink size={'lg'} href="mailto:hello@davidkathrein.at">
                 Warteliste beitreten <MoveRight size={16} />
               </ButtonLink>

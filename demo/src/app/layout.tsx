@@ -46,17 +46,17 @@ export default function RootLayout({
                 <NavbarLink href="/#weitere-features">Features</NavbarLink>
                 <NavbarLink href="/#team">Team</NavbarLink>
                 <NavbarLink href="/#danke">Danksagung</NavbarLink>
-                <ButtonLink size="lg" href="mailto:hello@davidkathrein.at" className="mt-2 sm:hidden">
+                <ButtonLink size="lg" href="mailto:hello@davidkathrein.at" className="mt-2 md:hidden">
                   Warteliste beitreten <MoveRight size={20} />
                 </ButtonLink>
               </>
             }
             actions={
               <>
-                <PlainButtonLink href="#" className="max-sm:hidden">
+                <PlainButtonLink href="#" className="max-md:hidden">
                   Demovideo <PlayCircleIcon size={16} />
                 </PlainButtonLink>
-                <ButtonLink href="mailto:hello@davidkathrein.at">
+                <ButtonLink className="max-sm:hidden" href="mailto:hello@davidkathrein.at">
                   Warteliste beitreten <MoveRight size={16} />
                 </ButtonLink>
               </>

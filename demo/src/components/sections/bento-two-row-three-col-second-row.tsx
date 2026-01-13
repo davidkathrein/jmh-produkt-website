@@ -95,49 +95,50 @@ export default function BentoTwoRowThreeColSecondRow({
         <Subheading className="text-mist-950 dark:text-white">{headline}</Subheading>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           <div className="relative lg:col-span-3">
-            <div className="absolute inset-0 rounded-lg bg-white max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:bg-mist-900" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
-              <Image
-                alt={cards[0].image.alt}
-                src={cards[0].image.src}
-                className="h-80 object-cover object-bottom-left"
-                width={800}
-                height={320}
-              />
-              <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[0].eyebrow}</h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
-                  {cards[0].headline}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[0].description}</p>
+            <div className="relative z-10 h-full rounded-lg bg-white max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:bg-mist-900">
+              <div className="flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
+                <Image
+                  alt={cards[0].image.alt}
+                  src={cards[0].image.src}
+                  className="h-80 object-cover object-bottom-left"
+                  width={800}
+                  height={320}
+                />
+                <div className="p-10 pt-4">
+                  <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[0].eyebrow}</h3>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
+                    {cards[0].headline}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[0].description}</p>
+                </div>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl lg:rounded-tl-4xl dark:outline-white/10" />
           </div>
           <div className="relative lg:col-span-3">
-            <div className="absolute inset-0 rounded-lg bg-white lg:rounded-tr-4xl dark:bg-mist-900" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
-              <Image
-                alt={cards[1].image.alt}
-                src={cards[1].image.src}
-                className="h-80 object-cover object-bottom-left lg:object-bottom-right"
-                width={800}
-                height={320}
-              />
-              <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[1].eyebrow}</h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
-                  {cards[1].headline}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[1].description}</p>
+            <div className="relative z-10 h-full rounded-lg bg-white lg:rounded-tr-4xl dark:bg-mist-900">
+              <div className="flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
+                <Image
+                  alt={cards[1].image.alt}
+                  src={cards[1].image.src}
+                  className="h-80 object-cover object-bottom-left lg:object-bottom-right"
+                  width={cards[1].image.width}
+                  height={cards[1].image.height}
+                />
+                <div className="p-10 pt-4">
+                  <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[1].eyebrow}</h3>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
+                    {cards[1].headline}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[1].description}</p>
+                </div>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 lg:rounded-tr-4xl dark:outline-white/10" />
           </div>
           <div className="relative lg:col-span-2">
-            <div className="absolute inset-0 rounded-lg bg-white lg:rounded-bl-4xl dark:bg-mist-900" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
-              <div className="relative">
+            <div className="relative z-10 h-full rounded-lg bg-white lg:rounded-bl-4xl dark:bg-mist-900">
+              <div className="flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
                 <Image
                   alt={cards[2].image.alt}
                   src={cards[2].image.src}
@@ -145,53 +146,55 @@ export default function BentoTwoRowThreeColSecondRow({
                   width={cards[2].image.width}
                   height={cards[2].image.height}
                 />
-              </div>
-              <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[2].eyebrow}</h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
-                  {cards[2].headline}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[2].description}</p>
+                <div className="p-10 pt-4">
+                  <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[2].eyebrow}</h3>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
+                    {cards[2].headline}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[2].description}</p>
+                </div>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 lg:rounded-bl-4xl dark:outline-white/10" />
           </div>
           <div className="relative lg:col-span-2">
-            <div className="absolute inset-0 rounded-lg bg-white dark:bg-mist-900" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-              <Image
-                alt={cards[3].image.alt}
-                src={cards[3].image.src}
-                className="h-80 object-cover"
-                width={cards[3].image.width}
-                height={cards[3].image.height}
-              />
-              <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[3].eyebrow}</h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
-                  {cards[3].headline}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[3].description}</p>
+            <div className="relative z-10 h-full rounded-lg bg-white dark:bg-mist-900">
+              <div className="flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                <Image
+                  alt={cards[3].image.alt}
+                  src={cards[3].image.src}
+                  className="h-80 object-cover"
+                  width={cards[3].image.width}
+                  height={cards[3].image.height}
+                />
+                <div className="p-10 pt-4">
+                  <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[3].eyebrow}</h3>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
+                    {cards[3].headline}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[3].description}</p>
+                </div>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 dark:outline-white/10" />
           </div>
           <div className="relative lg:col-span-2">
-            <div className="absolute inset-0 rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-br-4xl dark:bg-mist-900" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
-              <Image
-                alt={cards[4].image.alt}
-                src={cards[4].image.src}
-                className="h-80 object-cover"
-                width={cards[4].image.width}
-                height={cards[4].image.height}
-              />
-              <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[4].eyebrow}</h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
-                  {cards[4].headline}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[4].description}</p>
+            <div className="relative z-10 h-full rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-br-4xl dark:bg-mist-900">
+              <div className="flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
+                <Image
+                  alt={cards[4].image.alt}
+                  src={cards[4].image.src}
+                  className="h-80 object-cover"
+                  width={cards[4].image.width}
+                  height={cards[4].image.height}
+                />
+                <div className="p-10 pt-4">
+                  <h3 className="text-sm/4 font-semibold text-mist-600 dark:text-mist-400">{cards[4].eyebrow}</h3>
+                  <p className="mt-2 text-lg font-medium tracking-tight text-mist-950 dark:text-white">
+                    {cards[4].headline}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-mist-600 dark:text-mist-400">{cards[4].description}</p>
+                </div>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-br-4xl dark:outline-white/10" />

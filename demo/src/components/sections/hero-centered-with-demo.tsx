@@ -2,6 +2,7 @@ import { clsx } from 'clsx/lite'
 import type { ComponentProps, ReactNode } from 'react'
 import { Container } from '../elements/container'
 import { Heading } from '../elements/heading'
+import { Spotlight } from '../elements/Spotlight'
 import { Text } from '../elements/text'
 
 export function HeroCenteredWithDemo({
@@ -27,7 +28,8 @@ export function HeroCenteredWithDemo({
         <div className="flex flex-col items-center gap-32">
           <div className="flex flex-col items-center gap-6">
             {eyebrow}
-            <Heading className="max-w-5xl text-center">{headline}</Heading>
+            <Spotlight />
+            <Heading className="relative z-10 max-w-5xl text-center">{headline}</Heading>
             <Text size="lg" className="flex max-w-3xl flex-col gap-4 text-center">
               {subheadline}
             </Text>

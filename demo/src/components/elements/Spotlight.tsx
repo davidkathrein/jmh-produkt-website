@@ -13,27 +13,10 @@ type SpotlightProps = {
   xOffset?: number
 }
 
-// adapted for light mode (only light mode usable)
-
 export const Spotlight = ({
-  gradientFirst = `radial-gradient(
-    68.54% 68.72% at 55.02% 31.46%,
-    hsla(210, 100%, 70%, 0.35) 0%,
-    hsla(210, 100%, 75%, 0.18) 45%,
-    hsla(210, 100%, 80%, 0) 75%
-  )`,
-  gradientSecond = `radial-gradient(
-    50% 50% at 50% 50%,
-    hsla(210, 100%, 72%, 0.28) 0%,
-    hsla(210, 100%, 78%, 0.12) 70%,
-    transparent 100%
-  )`,
-  gradientThird = `radial-gradient(
-    50% 50% at 50% 50%,
-    hsla(210, 100%, 74%, 0.22) 0%,
-    hsla(210, 100%, 80%, 0.1) 70%,
-    transparent 100%
-  )`,
+  gradientFirst = 'radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 90%, 70%, 0.18) 0%, hsla(210, 90%, 85%, 0.12) 45%, hsla(210, 90%, 95%, 0) 80%)',
+  gradientSecond = 'radial-gradient(50% 50% at 50% 50%, hsla(210, 90%, 75%, 0.14) 0%, hsla(210, 90%, 90%, 0.08) 70%, hsla(0, 0%, 100%, 0) 100%)',
+  gradientThird = 'radial-gradient(50% 50% at 50% 50%, hsla(210, 90%, 80%, 0.1) 0%, hsla(210, 90%, 95%, 0.06) 70%, hsla(0, 0%, 100%, 0) 100%)',
   translateY = -350,
   width = 560,
   height = 1380,
@@ -43,28 +26,20 @@ export const Spotlight = ({
 }: SpotlightProps = {}) => {
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="pointer-events-none absolute inset-0 h-full w-full max-w-screen overflow-hidden"
     >
       <motion.div
-        animate={{
-          x: [0, xOffset, 0],
-        }}
+        animate={{ x: [0, xOffset, 0] }}
         transition={{
           duration,
           repeat: Infinity,
           repeatType: 'reverse',
           ease: 'easeInOut',
         }}
-        className="pointer-events-none absolute top-0 left-0 z-40 h-screen w-screen"
+        className="pointer-events-none absolute top-0 left-0 h-screen w-screen"
       >
         <div
           style={{
@@ -73,7 +48,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0`}
+          className="absolute top-0 left-0"
         />
 
         <div
@@ -83,7 +58,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className="absolute top-0 left-0 origin-top-left"
         />
 
         <div
@@ -93,21 +68,19 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className="absolute top-0 left-0 origin-top-left"
         />
       </motion.div>
 
       <motion.div
-        animate={{
-          x: [0, -xOffset, 0],
-        }}
+        animate={{ x: [0, -xOffset, 0] }}
         transition={{
           duration,
           repeat: Infinity,
           repeatType: 'reverse',
           ease: 'easeInOut',
         }}
-        className="pointer-events-none absolute top-0 right-0 z-40 h-screen w-screen"
+        className="pointer-events-none absolute top-0 right-0 h-screen w-screen"
       >
         <div
           style={{
@@ -116,7 +89,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0`}
+          className="absolute top-0 right-0"
         />
 
         <div
@@ -126,7 +99,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className="absolute top-0 right-0 origin-top-right"
         />
 
         <div
@@ -136,7 +109,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className="absolute top-0 right-0 origin-top-right"
         />
       </motion.div>
     </motion.div>
